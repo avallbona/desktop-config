@@ -2,8 +2,6 @@
 - hosts: localhost
   connection: local
   become: true
-  collections:
-    - community.general.pipx
 
   tasks:
   - name: install packages
@@ -42,16 +40,16 @@
     ansible.builtin.pip:
       name: pipx
 
-  - name: install black with pipx
-    community.general.pipx:
-      name: black
-
-  - name: install isort with pipx
-    community.general.pipx:
-      name: isort
-
-  - name: install pre-commit with pipx
-    community.general.pipx:
-      name: pre-commit
+#   - name: install black with pipx
+#     community.general.pipx:
+#       name: black
+#
+#   - name: install isort with pipx
+#     community.general.pipx:
+#       name: isort
+#
+#   - name: install pre-commit with pipx
+#     community.general.pipx:
+#       name: pre-commit
 
 
