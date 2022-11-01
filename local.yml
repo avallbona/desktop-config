@@ -41,6 +41,9 @@
     ansible.builtin.pip:
       name: pipx
 
+  - name: execute ensurepip
+    ansible.builtin.command: pipx ensurepath
+
   - name: install black with pipx
     community.general.pipx:
       name: black
