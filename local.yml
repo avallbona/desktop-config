@@ -17,36 +17,36 @@
        - stacer
        - google-chrome-stable
 
-  - name: install snap apps
-    community.general.snap:
-      name:
-        - spotify
-        - postman
-        - telegram-desktop
-        - pomatez
-        - kubectl
-        - gimp
-        - vlc
-
-  - name: install kubectl
-    community.general.snap:
-      name: kubectl
-      classic: true
-
-  - name: install pycharm-professional
-    community.general.snap:
-      name: pycharm-professional
-      classic: true
-
-  - name: install pipx
-    ansible.builtin.pip:
-      name: pipx
-
-  - name: install pipx apps
-    community.general.pipx:
-      name:
-        - black
-        - isort
-        - pre-commit
+#   - name: install snap apps
+#     community.general.snap:
+#       name:
+#         - spotify
+#         - postman
+#         - telegram-desktop
+#         - pomatez
+#         - kubectl
+#         - gimp
+#         - vlc
+#
+#   - name: install kubectl
+#     community.general.snap:
+#       name: kubectl
+#       classic: true
+#
+#   - name: install pycharm-professional
+#     community.general.snap:
+#       name: pycharm-professional
+#       classic: true
+#
+#   - name: install pipx
+#     ansible.builtin.pip:
+#       name: pipx
+#
+#   - name: install pipx apps
+#     community.general.pipx:
+#       name:
+#         - black
+#         - isort
+#         - pre-commit
 
 
