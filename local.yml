@@ -3,7 +3,7 @@
   connection: local
   become: true
   collections:
-    - community.general
+    - community.general.pipx
 
   tasks:
   - name: install packages
