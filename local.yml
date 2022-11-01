@@ -25,21 +25,21 @@
         - pomatez
         - gimp
         - vlc
-#
-#   - name: install kubectl
-#     community.general.snap:
-#       name: kubectl
-#       classic: true
-#
+
+  - name: install kubectl
+    community.general.snap:
+      name: kubectl
+      classic: true
+
   - name: install pycharm-professional
     community.general.snap:
       name: pycharm-professional
       classic: true
-#
-#   - name: install pipx
-#     ansible.builtin.pip:
-#       name: pipx
-#
+
+  - name: install pipx
+    ansible.builtin.pip:
+      name: pipx
+
 #   - name: install pipx apps
 #     community.general.pipx:
 #       name:
