@@ -40,11 +40,11 @@
     ansible.builtin.pip:
       name: pipx
 
-#   - name: install pipx apps
-#     community.general.pipx:
-#       name:
-#         - black
-#         - isort
-#         - pre-commit
+  - name: install pipx apps
+    community.general.pipx:
+      name:
+        - black
+        - isort
+        - pre-commit
 
 
