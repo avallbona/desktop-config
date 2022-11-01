@@ -43,6 +43,8 @@
 
   - name: execute ensurepip
     ansible.builtin.command: pipx ensurepath
+    become: yes
+    become_user: avallbona
 
   - name: install black with pipx
     community.general.pipx:
