@@ -7,7 +7,7 @@
   - name: install packages
     package:
       name: 
-#        - git-all
+       - git-all
        - htop
        - vim
        - curl
