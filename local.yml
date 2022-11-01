@@ -16,16 +16,16 @@
        - geany
        - stacer
 
-#   - name: install snap apps
-#     community.general.snap:
-#       name:
-#         - spotify
-#         - postman
-#         - telegram-desktop
-#         - pomatez
-#         - kubectl
-#         - gimp
-#         - vlc
+  - name: install snap apps
+    community.general.snap:
+      name:
+        - spotify
+        - postman
+        - telegram-desktop
+        - pomatez
+        - kubectl
+        - gimp
+        - vlc
 #
 #   - name: install kubectl
 #     community.general.snap:
