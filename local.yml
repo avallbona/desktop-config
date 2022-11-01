@@ -42,7 +42,7 @@
       name: pipx
 
   - name: execute ensurepip
-    ansible.builtin.command: pipx ensurepath
+    ansible.builtin.command: pipx ensurepath --force
     become: yes
     become_user: avallbona
 
