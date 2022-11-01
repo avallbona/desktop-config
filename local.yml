@@ -15,7 +15,7 @@
        - terminator
        - geany
        - stacer
-       - google-chrome-stable
+       - google-chrome-stable/stable
 
 #   - name: install snap apps
 #     community.general.snap:
