@@ -32,10 +32,10 @@
 #       name: kubectl
 #       classic: true
 #
-#   - name: install pycharm-professional
-#     community.general.snap:
-#       name: pycharm-professional
-#       classic: true
+  - name: install pycharm-professional
+    community.general.snap:
+      name: pycharm-professional
+      classic: true
 #
 #   - name: install pipx
 #     ansible.builtin.pip:
