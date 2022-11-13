@@ -46,14 +46,46 @@
     become: yes
     become_user: avallbona
 
-  - name: install black with pipx
-    community.general.pipx:
-      name: black
+#   - name: install black with pipx
+#     community.general.pipx:
+#       name: black
+#
+#   - name: install isort with pipx
+#     community.general.pipx:
+#       name: isort
+#
+#   - name: install pre-commit with pipx
+#     community.general.pipx:
+#       name: pre-commit
 
-  - name: install isort with pipx
-    community.general.pipx:
-      name: isort
+  # docker
+  - name: install packages necessary for docker
+    apt:
+      name:
+        - apt-transport-https
+        - ca-certificates
+        - curl
+        - gnupg-agent
+        - software-properties-common
+      update_cache: yes
 
-  - name: install pre-commit with pipx
-    community.general.pipx:
-      name: pre-commit
+  - name: add apt-key
+    apt_key:
+      url: https://download.docker.com/linux/ubuntu/gpg
+
+  - name: add docker repo
+    apt_repository:
+      repo: deb https://download.docker.com/linux/ubuntu jammy stable
+
+  - name: install docker
+    apt:
+      name:
+        - docker-ce
+        - docker-ce-cli
+        - containerd.io
+      update_cache: yes
+
+  - name: add user permissions
+    shell: "usermod -aG docker {{ ansible_env.SUDO_USER }}"
+
+  # end docker
